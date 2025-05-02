@@ -28,7 +28,7 @@ serve(async (req: Request) => {
     });
 
     const db1Page = await db1PageRes.json();
-    const status1 = db1Page.properties?.Status?.select?.name;
+    const status1 = db1Page.properties?.Status?.status?.name;
 
     if (!status1) {
       return new Response("No Status found on triggering page", { status: 200 });
